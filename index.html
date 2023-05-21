@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construção do Carrossel</title>
+    <link rel="stylesheet" href="docs/flickity.css" media="screen">
+
+    <style>
+        /* external css: flickity.css */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .carousel {
+            padding: 10px 0;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
+
+        .carousel-cell {
+            width: 120px;
+            height: 160px;
+            margin-right: 60px;
+            background: url;
+            border-radius: 5px;
+            counter-increment: carousel-cell;
+        }
+
+        /* style imagens de fundo da div */
+        .book__1 {
+            background: url(capas/img-1.jpg) no-repeat center center;
+        }
+
+        .book__2 {
+            background: url(capas/img-2.jpg) no-repeat center center;
+        }
+
+        .book__3 {
+            background: url(capas/img-3.jpg) no-repeat center center;
+        }
+
+        .book__4 {
+            background: url(capas/img-4.jpg) no-repeat center center;
+        }
+
+        .book__5 {
+            background: url(capas/img-5.jpg) no-repeat center center;
+        }
+
+        .book__6 {
+            background: url(capas/img-6.jpg) no-repeat center center;
+        }
+
+        .book__7 {
+            background: url(capas/img-7.jpg) no-repeat center center;
+        }
+
+        /* style para aparecer a lupa */
+        .lupa {
+            display: none;
+            
+        }
+
+        .carousel-cell:hover .lupa{
+            width: 100%;
+            height: 100%;
+            background: url(lupa.png) no-repeat center center;
+            display: block;
+            backdrop-filter: blur(2px);
+        } 
+
+        .sessao__carrossel {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        .titulo__carrossel {
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="sessao__carrossel">
+        <h1 class="titulo__carrossel">Material VIVO 1</h1>
+
+        <!-- Flickity HTML init -->
+        <div class="carousel" data-flickity='{ "groupCells": 4 }'>
+            <div class="carousel-cell book__1">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__2">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__3">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__4">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__5">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__6">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__7">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__1">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__2">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__3">
+                <div class="lupa"></div>
+            </div>
+            <div class="carousel-cell book__4">
+                <div class="lupa"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="docs/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
